@@ -1,0 +1,30 @@
+/* 
+    Selecter
+    universal, element, #id, .class
+    ' ' - decendent operator -- for any level
+    '+' - sibling combinator
+    '>' - child combinator
+    'input[type='text'] - attribute selector
+
+    psedu class
+    :hover
+    :active
+    :checked
+    :nth-of-type
+*/
+* {
+  font-family: "Courier New";
+}
+h3 {
+  color: purple;
+}
+#login {
+  background-color: white;
+}
+#signup {
+  background-color: #b92b27;
+  color: white;
+}
+p a {
+  color: purple;
+}
