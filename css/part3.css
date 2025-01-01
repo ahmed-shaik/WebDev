@@ -1,0 +1,47 @@
+/* 
+Box model
+    height
+    width
+    border -- 
+      border-width, border-style, border-color
+      border-left, border-right, border-top, border-bottom
+      border-radius, border-top-right-radius
+    padding -- padding-top right left bottom
+    margin -- margin-top right left bottom
+    display
+      inline
+      block
+      inline-block -- behave like inline elements
+      none
+    relative units
+      %    -- width : 33.33% relative to the parent
+      em   -- font size of parent for textographic(font-size), self font size for other(width)
+      rem  -- font size of root element
+*/
+/* div {
+  height: 200px;
+  width: 500px;
+  border: 3px solid black;
+  border-radius: 10px /*50%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+button {
+  border: 2px solid blue;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+} */
+.outer {
+  height: 200px;
+  width: 70px;
+  border: 2px solid black;
+}
+.inner {
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+  margin: 10px;
+  border-radius: 50%;
+}
