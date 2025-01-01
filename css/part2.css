@@ -8,11 +8,34 @@
 
     psedu class
     :hover
-    :active
-    :checked
+    :active -- active when it is clicked
+    :checked -- for checkbox
     :nth-of-type
+    :focus -- Styles an element when it gains focus (commonly used for form inputs, buttons, etc.).
+    :visited -- Styles links that the user has already visited.
+    a:visited {
+      color: purple;
+    }
+    :first-child -- Usage: Styles an element if it is the first child of its parent.
+    :last-child -- Usage: Styles an element if it is the last child of its parent.
+    :disabled -- Usage: Styles form elements that are disabled.
+
+    pseudo elements
+    ::before -- Inserts content before an element's actual content.
+    p::before {
+      content: "Note: ";
+      font-weight: bold;
+    }
+    ::after -- Inserts content after an element's actual content.
+    p::after {
+      content: ".";
+    }
+    ::first-letter -- Styles the first letter of a block-level element.
+    ::first-line -- Usage: Styles the first line of a block-level element (typically used for paragraphs).
+    ::selection -- Usage: Styles the portion of text that the user has highlighted or selected.
+    buttton , input cant inherit directly 
 */
-* {
+/* * {
   font-family: "Courier New";
 }
 h3 {
@@ -27,4 +50,26 @@ h3 {
 }
 p a {
   color: purple;
+}
+/* button:hover {
+  color: #b92b27;
+  background-color: black;
+}
+button:active {
+  color: blue;
+  background-color: pink;
+}
+*/
+* {
+  font-family: "Courier New";
+}
+h1 {
+  color: #1b74e4;
+}
+#searchbtn {
+  background-color: black;
+  color: white;
+}
+.userbtn {
+  background-color: aqua;
 }
