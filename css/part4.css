@@ -1,0 +1,78 @@
+/* 
+    opacity - visibilty of the element
+    transition - property name|duration|timing-function|dealy
+        -transition-duration
+    transform
+    box-shadow: x offset y offset blurradius color
+    backgrournd-image: url(../images/) 
+    background-size: contain--repaeat, cover--crop, auto--streach
+    position - top left right bottom
+        static -- default value no changes
+        relative -- relative to itself
+        absolute -- whole document
+        fixed -- it is fixed to screen
+*/
+/* 
+div {
+  height: 200px;
+  width: 200px;
+  background-color: aqua;
+  /* opacity: 0.2; 
+  transition-duration: 0.9s;
+  transition-delay: 0.5s;
+  transition-timing-function: linear;
+}
+div:hover {
+  background-color: beige;
+  border-radius: 50%;
+} */
+/* div {
+  margin-top: 10px;
+}
+div {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  background-color: #7aa874;
+  border: 2px solid black;
+  margin: 10px auto;
+  box-shadow: 3px 3px 10px gray;
+} */
+/* div:nth-of-type(2n) {
+  background-color: #f7db6a;
+}
+
+div:nth-of-type(3n) {
+  background-color: #ebb02d;
+}
+
+#one {
+  transform: rotate(45deg);
+}
+#two {
+  transform: scale(1.5);
+}
+#three {
+  transform: translate(150px, 150px);
+}
+#four {
+  transform: skew(45deg);
+} */
+.outer {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  box-shadow: 2px 2px 10px gray;
+  border-radius: 10px;
+  transition: box-shadow 2s ease-in 0s;
+}
+img {
+  height: 50%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.outer:hover {
+  box-shadow: 0 3px 20px black;
+}
