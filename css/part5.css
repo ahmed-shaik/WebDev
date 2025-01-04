@@ -1,0 +1,58 @@
+/* 
+    flexbox -- It is a one-dimensional layout method for arranging items in rows or columns.
+                                    |
+                                    |
+                                    |
+                                    |
+                                    |
+            ------------------------|--------------------------- main axis
+                                    |
+                                    |
+                                    |
+                                    |
+                                    |
+                                cross axis
+    • flexbox-direction : row main axis, left to right
+    • flexbox-direction : row-reverse; main axis, right to left
+    • flexbox-direction : column; DVZaxis, top to bottom
+    • flexbox-direction : column-reverse;axis, bottom to top
+    jsutify-content: Tells how the browser distributes space between and around content items along the main-axis
+        center flex-start flex-end space-between space-around space-evenly
+    flex-wrap -- Sets whether flex items are forced onto one line or can wrap onto multiple lines
+        wrap nowrap wrap-reverse
+    align-items -- Distributes our items along the cross axis
+        center flex-start flex-end baseline
+    align-content -- it sets the distribution of space between and around content items along a flexbox's cross-axis
+        center flex-start flex-end space-between space-around space-evenly
+    align-self -- Aligns an item along the cross 
+        center flex-start flex-end baseline
+    flex-basis --  grows the element to fill the blank sizes 300px
+    felx-grow -- It specifies how much of the flex container's remaining space should be assigned to the flex item's main size
+        0.5 1 2
+    flex-shrink
+    
+*/
+
+#container {
+  height: 300px;
+  width: 80%;
+  background-color: azure;
+  margin: 10px auto;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+h1 {
+  text-align: center;
+}
+#container div {
+  height: 100px;
+  width: 300px;
+  color: white;
+  text-align: center;
+  font-size: 1.54;
+}
