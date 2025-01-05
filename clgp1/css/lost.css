@@ -1,0 +1,75 @@
+* {
+  margin: 0px;
+}
+header {
+  font-size: 1.2rem;
+  text-align: center;
+  color: rgb(253, 240, 213);
+  background-color: rgb(193, 18, 31);
+  padding: 1rem 0rem;
+  margin-bottom: 1.5rem;
+}
+body {
+  color: rgb(139, 106, 42);
+}
+h1 {
+  padding: 0rem 0rem 1rem 0rem;
+}
+h3 {
+  color: rgb(0, 92, 141);
+  margin: 0.8rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+header p {
+  font-size: 1.3rem;
+}
+input[type="text"] {
+  width: 80%;
+  border-radius: 5px;
+}
+section {
+  width: 80%;
+  margin: 2em auto;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.185);
+  border-radius: 10px;
+}
+form {
+  display: flex;
+  padding: 1rem 1rem;
+  justify-content: start;
+  /* flex-wrap: wrap; */
+}
+button {
+  border: 2px solid rgb(193, 18, 31);
+  background-color: rgb(193, 18, 31);
+  color: rgb(253, 240, 213);
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+  margin-left: 68%;
+}
+section > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  height: 12rem;
+  width: 23rem;
+  border: 2px solid rgb(193, 18, 31);
+  margin: 1rem;
+  border-radius: 1rem;
+}
+strong {
+  color: rgb(102, 155, 188);
+}
+.card p {
+  padding: 0rem 0rem 0.5rem 1rem;
+}
+footer {
+  background-color: rgb(102, 155, 188);
+  text-align: center;
+  margin-top: 2rem;
+  padding: 3rem 3rem;
+  color: rgb(253, 240, 213);
+}
