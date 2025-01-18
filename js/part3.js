@@ -36,6 +36,7 @@
 
 // cars = ["audit", "bmw", "xuv", "maruti"];
 // cars.splice(3); //ddelete last element
+
 // cars.splice(0, 1); //delete first element form 0 index
 // cars.splice(0, 0, "adfa", "aefdad", "afaf");
 
