@@ -120,32 +120,43 @@
 
 // practise question
 let p = document.createElement("p");
-p.innerText = "Hey I am Red";
-p.style.color = "red"; //do this with the ccs file and use classList.add here
-//css
-//.red {
-// color:red;
-// }
-// js
-// p.classLst.add("red");
+// p.innerText = "Hey I am Red";
+// p.style.color = "red"; //do this with the ccs file and use classList.add here
+// //css
+// //.red {
+// // color:red;
+// // }
+// // js
+// // p.classLst.add("red");
 
-let body = document.querySelector("body");
-body.appendChild(p);
+// let body = document.querySelector("body");
+// body.appendChild(p);
 
-let h3 = document.createElement("h3");
-h3.innerText = "I am Blue H3";
-h3.style.color = "blue";
-body.appendChild(h3);
+// let h3 = document.createElement("h3");
+// h3.innerText = "I am Blue H3";
+// h3.style.color = "blue";
+// body.appendChild(h3);
 
-let div = document.createElement("div");
-div.style.backgroundColor = "pink";
-div.style.border = "2px solid black";
-body.appendChild(div); //can also use append
+// let div = document.createElement("div");
+// div.style.backgroundColor = "pink";
+// div.style.border = "2px solid black";
+// body.appendChild(div); //can also use append
 
-let h1 = document.createElement("h1");
-h1.innerText = "I am in  a div";
-div.appendChild(h1); //can also use append
+// let h1 = document.createElement("h1");
+// h1.innerText = "I am in  a div";
+// div.appendChild(h1); //can also use append
 
-let p1 = document.createElement("p");
-p1.innerText = "Me too";
-div.appendChild(p1);
+// let p1 = document.createElement("p");
+// p1.innerText = "Me too";
+// div.appendChild(p1);
+
+//assignment
+let inp = document.createElement("input");
+document.querySelector("body").append(inp);
+
+let button = document.createElement("button");
+document.querySelector("body").append(button);
+button.innerText = "click me";
+
+inp.setAttribute("placeholder", "User Name");
+inp.setAttribute("innerText", "CLick Me");
