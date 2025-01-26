@@ -71,14 +71,14 @@
 // });
 
 // form event
-let form = document.querySelector("form");
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
+// let form = document.querySelector("form");
+// form.addEventListener("submit", function (event) {
+//   event.preventDefault();
 
-  //   alert("Form Submitted");
-  let inp = this.elements[0]; //document.querySelector("input");
-  console.log(inp.value);
-});
+//   //   alert("Form Submitted");
+//   let inp = this.elements[0]; //document.querySelector("input");
+//   console.log(inp.value);
+// });
 
 // change event
 // The change event occurs when the value of an element has been changed (only works on <input>, <textarea>
@@ -87,3 +87,15 @@ form.addEventListener("submit", function (event) {
 // input event
 // The input event fires when the value of an <input> , <select> , or <textarea> element has been changed.
 
+let inp = document.querySelector("input");
+let h1 = document.querySelector("h1");
+inp.addEventListener("input", function (event) {
+  let newChar = event.data;
+  if (
+    (newChar >= "A" && newChar <= "Z") ||
+    newChar == " " ||
+    (newChar >= "a" && newChar <= "z")
+  ) {
+    h1.innerText = h1.innerText + newChar;
+  }
+});
