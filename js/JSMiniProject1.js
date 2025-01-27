@@ -33,3 +33,44 @@
 
 //
 //simon says game
+let gameSeq = [];
+let userSeq = [];
+let btns = ["yellow", "red", "purple", "green"];
+let h2 = document.querySelector("h2");
+
+let start = false;
+let l = 0;
+
+document.addEventListener("keypress", function () {
+  if (start == false) {
+    console.log("Game started");
+    start = true;
+    levelUp();
+  }
+});
+
+function btnFlash(btn) {
+  btn.classList.add("flash");
+  setTimeout(() => {
+    btn.classList.remove("flash");
+  }, 250);
+}
+function levelUp() {
+  l++;
+  h2.innerText = `level ${l}`;
+  let randIdx = Math.floor(Math.random() * 3);
+  let randBtn = document.querySelector(`.${btns[randIdx]}`);
+  gameSeq.push(btns[randIdx]);
+  console.log(gameSeq);
+  btnFlash(randBtn);
+}
+
+function btnPress() {
+  let btn = this;
+  btnFlash(btn);
+}
+
+let allbtns = document.querySelectorAll(".btn");
+for (btn of allbtns) {
+  btn.addEventListener("click", btnPress);
+}
