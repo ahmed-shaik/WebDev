@@ -93,6 +93,10 @@ let request = saveToDb("Hi");
 request
   .then(() => {
     console.log("Data saved successfully");
+    return saveToDb("hello");
+  })
+  .then(() => {
+    console.log("Data 2 saved");
   })
   .catch(() => {
     console.log("Failed to save data");
