@@ -74,6 +74,57 @@
 // Tools
 
 // • Hoppscoth
-
-
 // • Postman
+
+// Ajax
+// Asynchronous JavaScript and XML
+// Http Verbs
+// Examples :
+// GET
+// • POST
+// • DELETE
+
+// Status Codes
+// Examples :
+// 200-0K
+// 404-
+// Not Found
+// 400 - Bad Request
+// 500-
+// Internal Server Error
+
+// Add Information
+// in URLs
+// Query Strings
+// https:llwww.google.comlsearch?q=harry+porter
+
+// api.potterdb.com
+
+// Http headers
+// header , value
+
+let url = "https://catfact.ninja/fact";
+// fetch(url) //returns a promise
+//   .then((res) => {
+//     console.log(res);
+//     return res.json();
+//   })
+//   .then((data) => {
+//     //res.json() returns a promise
+//     //data is object
+//     console.log(data.fact);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+async function getFacts() {
+  try {
+    let res = await fetch(url); //fetch takes time as it calls api so if we log it may print undefined so we use await
+    console.log(res);
+    let data = await res.json();
+    console.log(data.fact);
+  } catch (err) {
+    console.log(err);
+  }
+}
