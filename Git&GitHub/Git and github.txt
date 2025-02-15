@@ -1,0 +1,64 @@
+What is Git?
+Free & Open Source Version Control System -> tools that help to tracks changes in code
+
+What is Github?
+Website where we host repositories online
+
+git config --global user.name "My Name"
+git config --global user.email "someone@email.com"
+
+Basic Commands
+• Clone - Cloning a repository on our local machine   git clone <- some link ->
+• status - displays the state of the code git status
+• add - adds new or changed files in your working directory to the Git staging area.  git add <- file name ->
+• commit - it is the record of change    git commit -m "some message"
+• push - upload local repo content to remote repo  git push origin main
+• init- used to create a new git repo git init
+
+git remote add origin link
+git remote -v (to verify remote)
+git branch (to check branch)
+git branch -M main (to rename branch)
+git push origin main
+
+
+Branch Commands
+git branch  (to check branch)
+git branch -M main (to rename branch)
+git checkout <- branch name ->   (to navigate) - move from one branch to another
+git checkout -b <- new branch name -> (to create new branch)
+git branch -d <- branch name -> (to delete branch)
+
+Merging Code
+git diff <- branch name->  (to compare commits, branches, files & more)
+git merge <- branch name-> (to merge 2 branches)
+or
+Create a PR(pull request)
+
+Pull Request
+It lets you tell others about changes you've pushed to a branch in a repository on GitHub.
+
+git pull origin main
+used to fetch and download content from a remote repo and immediately update the local repo
+to match that content.
+
+Merge Conflicts
+An event that takes place when Git is unable to automatically resolve differences in code
+between two commits.
+
+Fixing Mistakes
+Case 1 : staged(add) changes
+git reset <- file name ->
+git reset
+
+Case 2 : commited changes (for one commit)
+git reset HEAD~1
+
+Case 3 : commited changes (for many commits)
+git reset <- commit hash ->
+git reset --hard <- commit hash ->
+
+What is Forking?
+A fork is a new repository that shares code and visibility settings with the original "upstream"
+repository.
+Fork is a rough copy.
