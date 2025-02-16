@@ -6,7 +6,15 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  body {
+    /* background: linear-gradient(to right, #dfe9f3, #ffffff); */
+    background: linear-gradient(
+      to right,
+      rgba(253, 240, 213, 0.162),
+      rgb(193, 18, 31, 0.1),
+      rgba(102, 155, 188, 0.11)
+    );
+  }
   color: #333;
 }
 
