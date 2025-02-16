@@ -108,6 +108,14 @@
 
     <!-- Form -->
     <form id="submitItemForm">
+      <!-- Dropdown for Lost/Found Selection -->
+      <label for="status">Have you Lost or Found an item?*</label>
+      <select id="status" name="status" required style="width: 101%">
+        <option value="" disabled selected>Select an option</option>
+        <option value="lost">Lost</option>
+        <option value="found">Found</option>
+      </select>
+
       <label for="itemName">Item Name*</label>
       <input
         type="text"
@@ -164,9 +172,6 @@
         placeholder="123-456-7890"
         required
       />
-
-      <label for="image">Upload an Image (Optional)</label>
-      <input type="file" id="image" name="image" accept="image/*" />
 
       <button type="submit">Submit</button>
     </form>
