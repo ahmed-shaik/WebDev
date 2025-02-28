@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.px-1 {
+  background-image: url(/images/image1.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 46rem;
+}
+.px-1 > div {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+span {
+  background-color: rgb(49, 30, 30);
+  padding: 2rem 1rem;
+  font-size: 1.5rem;
+  color: white;
+}
+.section {
+  padding: 5%;
+}
+h2,
+p {
+  text-align: center;
+  line-height: 1.8rem;
+}
+.px-2 {
+  background-image: url(/images/image2.png);
+  background-position: center;
+  background-attachment: fixed;
+  height: 25rem;
+}
+.px-2 > div {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+.section-dark {
+  background-color: rgb(49, 30, 30);
+  color: white;
+}
+.px-3 {
+  background-image: url(/images/image3.png);
+  background-position: center;
+  background-attachment: fixed;
+  height: 25rem;
+}
+.px-3 > div {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+.px-4 {
+  background-image: url(/images/image1.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 46rem;
+}
+
+.px-4 > div {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
