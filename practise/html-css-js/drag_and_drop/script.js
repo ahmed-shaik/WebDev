@@ -30,4 +30,5 @@ function drag() {
     dragging = false;
   }
 }
+
 drag();
