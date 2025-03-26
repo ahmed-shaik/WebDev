@@ -12,3 +12,4 @@
 // module.exports - used to use the functions from the other files
 const val = require("./for(first)usageofmodulexportex-1");
 console.log(val);
+
