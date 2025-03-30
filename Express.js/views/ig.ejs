@@ -1,0 +1,30 @@
+<!-- C:\Users\ahmed\Git\WebDev\Express.js\templates.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+    <link rel="stylesheet" href="/style.css"></link>
+  </head> -->
+  <!-- to create sub templates we remove head content and paste it in other folder in views -->
+  <!-- and we use includes -->
+  <%- include("includes/head.ejs") %>
+  <body>
+    <!-- <h2>This page belongs to <%#username%></h2>
+    <button>follow</button> -->
+    <!-- FOr loops -->
+    <!-- <%#for(var i=0; i<followers.length; i++) {%> -->
+    <!-- <h3><%#followers[i]%></h3> -->
+    <!-- <%#} %> -->
+    <h2>This page belongs to <%=data.name%></h2>
+    <p>followers <%=data.followers%></p>
+    <p>following <%=data.following%></p>
+    <%for(let post of data.posts) {%>
+    <img src="<%=post.image%>" alt="some img" />
+    <br />
+    <p>likes <%=post.likes%></p>
+    <p>comments <%=post.comments%></p>
+    <%}%>
+  </body>
+</html>
