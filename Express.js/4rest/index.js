@@ -18,6 +18,7 @@
 
 const express = require("express");
 const path = require("path");
+const { v4: uuid4 } = require("uuid");
 const app = express();
 const port = 8080;
 
@@ -28,9 +29,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true })); // to parse form data
 
 let posts = [
-  { id: "1a", username: "ahmed", content: "This is post 1" },
-  { id: "2b", username: "pardhu", content: "This is post 2" },
-  { id: "3c", username: "vara", content: "This is post 3" },
+  { id: uuid4(), username: "ahmed", content: "This is post 1" },
+  { id: uuid4(), username: "pardhu", content: "This is post 2" },
+  { id: uuid4(), username: "vara", content: "This is post 3" },
 ];
 
 app.get("/", (req, res) => {
@@ -47,8 +48,34 @@ app.get("/posts/new", (req, res) => {
 
 app.post("/posts", (req, res) => {
   let { username, content } = req.body;
-  posts.push({ username, content });
+  let id = uuid4();
+  posts.push({ id, username, content });
   res.redirect("/posts");
+});
+
+app.get("/posts/:id", (req, res) => {
+  let { id } = req.params;
+  console.log(id);
+  let post = posts.find((p) => id == p.id);
+  console.log(post);
+  res.render("show.ejs", { post });
+});
+
+// Create id for Posts
+// UUID Package
+
+app.patch("/posts/:id", (req, res) => {
+  let { id } = req.params;
+  console.log(id);
+  let con = req.body.content;
+  let post = posts.find((p) => id == p.id);
+  post.content = con;
+});
+
+app.get("/posts/:id/edit", (req, res) => {
+  let { id } = req.params;
+  let post = posts.find((p) => id == p.id);
+  res.render("edit.ejs", { posts });
 });
 
 app.listen(port, () => {
