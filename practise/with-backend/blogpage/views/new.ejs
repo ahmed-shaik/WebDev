@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ceate a new blog</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Your Blog</h1>
+      <nav>
+        <a href="http://localhost:8080/">Home</a>
+        <a href="http://localhost:8080/posts">All Posts</a>
+        <a href="http://localhost:8080/posts/new">Create Post</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <form method="POST" action="/posts">
+          <label for="title">Enter Title of your blog:</label>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Enter Title of your blog"
+          />
+          <label for="content">Enter Content:</label>
+          <textarea
+            name="content"
+            id="content"
+            cols="130"
+            rows="10"
+            placeholder="Enter Content"
+          ></textarea>
+          <label for="author">Enter Your Name</label>
+          <input
+            type="text"
+            name="author"
+            id="author"
+            placeholder="Enter Your Name"
+          />
+          <br />
+          <center>
+            <button
+              style="padding: 1rem 3rem; font-size: 1.5rem; margin-top: 1rem"
+            >
+              Submit
+            </button>
+          </center>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posts</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to My Blog</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="http://localhost:8080/posts">All Posts</a>
+        <a href="http://localhost:8080/posts/new">Create Post</a>
+      </nav>
+    </header>
+    <main>
+      <%for(let post of posts) {%>
+      <section>
+        <h2><%= post.title %></h2>
+        <%= post.content.length > 90 ? post.content.slice(0, 90) + '...' :
+        post.content %>
+        <p>Author: <%= post.author %></p>
+        <a href="http://localhost:8080/posts/<%= post.id %>">Read More</a>
+        <a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit Post</a>
+        <form
+          method="post"
+          action="http://localhost:8080/posts/<%= post.id %>?_method=DELETE"
+        >
+          <button>Delete post</button>
+        </form>
+      </section>
+      <%}%>
+    </main>
+  </body>
+</html>

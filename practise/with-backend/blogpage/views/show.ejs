@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Individual Post</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to <%=post.author%>'s Blog</h1>
+      <nav>
+        <a href="http://localhost:8080/">Home</a>
+        <a href="http://localhost:8080/posts">All Posts</a>
+        <a href="http://localhost:8080/posts/new">Create Post</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1><%= post.title %></h1>
+        <br /><br />
+        <p><%= post.content %></p>
+        <br /><br />
+        <p>Author: <%= post.author %></p>
+        <!-- <form action="/posts/<%= post.id %>/edit?_method=PATCH" method="GET">
+          <button>Edit Post</button>
+        </form> -->
+        <!-- <form action="/posts/< post.id %>?_method=DELETE" method="POST">
+          <button>Delete Post</button>
+        </form> -->
+      </section>
+    </main>
+  </body>
+</html>
