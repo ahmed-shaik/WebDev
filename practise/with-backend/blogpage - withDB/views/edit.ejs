@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Your Post</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to <%= post.author %>'s Post</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/posts">All Posts</a>
+        <a href="/posts/new">Create Post</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h3>Author: <%= post.author %></h3>
+        <form method="POST" action="/posts/<%= post.id %>?_method=PATCH">
+          <label for="content">Edit Your Content:</label>
+          <textarea
+            name="content"
+            id="content"
+            cols="80"
+            rows="15"
+            style="font-size: 1.2rem"
+          >
+<%- post.content %></textarea
+          >
+
+          <center>
+            <button
+              style="padding: 1rem 3rem; font-size: 1.5rem; margin-top: 1rem"
+            >
+              Save Changes
+            </button>
+          </center>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

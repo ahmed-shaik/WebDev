@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Individual Post</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to <%=post.author%>'s Blog</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/posts">All Posts</a>
+        <a href="/posts/new">Create Post</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1><%= post.title %></h1>
+        <br /><br />
+        <p><%- post.content %></p>
+        <br /><br />
+        <p>Author: <%= post.author %></p>
+      </section>
+    </main>
+  </body>
+</html>

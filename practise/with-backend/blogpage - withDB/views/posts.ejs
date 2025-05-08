@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posts</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to My Blog</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/posts">All Posts</a>
+        <a href="/posts/new">Create Post</a>
+      </nav>
+    </header>
+    <main>
+      <% function stripHTML(html) { return html.replace(/<[^>]*>/g, ''); } %> <%
+      for (let post of posts) { %>
+      <section>
+        <h2><%= post.title %></h2>
+
+        <% const plainText = stripHTML(post.content); %>
+        <p>
+          <%= plainText.length > 90 ? plainText.slice(0, 90) + '...' : plainText
+          %>
+        </p>
+
+        <p>Author: <%= post.author %></p>
+        <a href="/posts/<%= post.id %>">Read More</a>
+        <a href="/posts/<%= post.id %>/edit">Edit Post</a>
+        <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
+          <button type="submit">Delete post</button>
+        </form>
+      </section>
+      <% } %>
+    </main>
+  </body>
+</html>
