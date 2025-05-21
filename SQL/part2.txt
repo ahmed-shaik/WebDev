@@ -1,0 +1,102 @@
+Where Clause - To define some conditions
+
+SELECT coli, c012 FROM table_name WHERE conditions;
+
+SELECT name,age, followers FROM user WHERE age < 16
+
+Operators:
+    Arithmetic Operators : +(addition) , -(subtraction), * (multiplication), /(division), %(modulus)
+    Comparison Operators : = (equal to), != (not equal to), > , >=, <
+    Logical Operators : AND, OR , NOT, IN, BETWEEN, ALL, LIKE, ANY
+    Bitwise Operators : & (Bitwise AND), I (Bitwise OR)
+
+    BETWEEN (selects for a given range)
+    IN(matches any value in the list)
+    NOT (to negate the given condition)
+
+    BETWEEN - SELECT name,age, followers FROM user WHERE age BETWEEN 15 AND 17
+    IN - WHERE email IN
+
+Limit Clause
+Sets an upper limit on number of (tuples) rows to be returned
+
+SELECT coli, c012 FROM table_name LIMIT 2;
+
+Order by Clause
+To sort in ascending (ASC) or descending order (DESC)
+
+SELECT coli, c012 FROM table_name ORDER BY col_ name(s) (ASC, DESC);
+
+
+Aggregate Functions
+Aggregate functions perform a calculation on a set of values, and return a sin le value.
+
+• COUNT()       -   SELECT count(age) FROM user WHERE age =14;
+• MAX()         -   SELECT max(age) FROM user;
+• MIN()
+• SUM()
+• AVG()
+
+
+Group by Clause
+Groups rows that have the same values into summary rows.
+It collects data from multiple records and groups the result by one or more column.
+
+*Generally we use group by with some aggregation function.
+
+SELECT age, count(id)
+FROM user
+GROUP BY age;
+
+
+Having Clause
+imilar to Where i.e. applies some condition on rows.
+But it is used when we want to apply any condition after grouping.
+
+SELECT age, count(id)
+FROM user
+GROUP BY age
+HAVING count(id)>2;
+
+
+General Order
+
+SELECT
+FROM 
+WHERE
+GROUP BY
+HAVING
+ORDER BY
+
+
+
+Update (to update existing rows)
+UPDATE table_ name SET coli =val 1, c012 = va12 WHERE condition;
+
+SET SQL_SAFE_UPDAtES = 0
+
+
+
+Delete (to delete existing rows)
+DELETE FROM table_ name WHERE condition;
+
+
+Alter (to change the schema)
+
+ADD COLUMN:
+ALTER TABLE table _ name ADD COLUMN column_name datatype constraint;
+
+DROP Column:
+ALTER TABLE table_ name DROP COLUMN column _ name;
+
+RENAME Table:
+ALTER TABLE table _ name RENAME TO new_ table_ name;
+
+CHANGE Column (rename):
+ALTER TABLE table_ name CHANGE COLUMN old _ name new_name new _ datatype new_ constraint;
+
+MODIFY Column (modify datatype/ constraint):
+ALTER TABLE table _ name MODIFY col_name new _ datatype new_constraint;
+
+Truncate (to delete  table's data):
+TRUNCATE TABLE table _ name; 
