@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users</title>
+  </head>
+  <body>
+    <center>
+      <h1>Users</h1>
+      <table border="1">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+        <% users.forEach(user => { %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.username %></td>
+          <td><%= user.email %></td>
+          <td>
+            <form action="/users/<%=user.id%>/edit" method="get">
+              <button>Edit</button>
+            </form>
+          </td>
+        </tr>
+        <% }) %>
+      </table>
+    </center>
+  </body>
+</html>
