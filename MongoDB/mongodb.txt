@@ -1,0 +1,42 @@
+mongosh  -- to start mongo shell
+
+use college  -- to create & use a new database called "college"
+
+
+BSON Data  -  binary json
+
+Document : Mongo stores data in form of documents (BSON docs)
+Collection : MongoDB stores documents in collections.
+
+INSERT in DB:
+
+db.collection.insertOne()
+db.student.insert0ne( { name: "adam", marks: 79 } )
+
+db. collection. insertMany()
+db.student.insertMany([{ name: "bob", marks: 65 }, { name: "eve", city: "Delhi" }])
+
+find in DB:
+db.student.find()
+db.collection.find( { key: value } )   --> returns a curser(reference to original)
+db.coIIectlon.findOne({key: value})    --> returns the actual document
+
+DB.STUDENT.FIND({city: "delhi", marks: 75});
+
+Find students where marks > 75
+db.student.find({marks: {$gt: 90}})
+Find students who live in Delhi or Mumbai
+db.student.find({city: {$in: ["Delhi", "Mumbai"]}})
+Find students who scored > 75 or live in Delhi
+db.student.find({$or: [{marks: {$gt: 75}}, {city: "delhi"}]})
+
+
+Update Methods:
+
+db.coIlection.updateOne(<filter> , <update>, <options> )
+db.collection.updateMany()
+
+db.student.updateOne({name: "adam"},{$set: {city: "bangalore"}})
+
+db.student.replaceOne({name: "bob", {name: "aaa", marks: 92}})
+
