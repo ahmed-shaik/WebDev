@@ -40,3 +40,15 @@ db.student.updateOne({name: "adam"},{$set: {city: "bangalore"}})
 
 db.student.replaceOne({name: "bob", {name: "aaa", marks: 92}})
 
+
+Nesting
+db.insertOne({name: "ahed", performance: {marks: 99, ball:2}})
+
+dbstudent.find({"performance.marks":99});
+
+
+DELETE in DB:
+db.collection.deIete0ne( filter, <options> )
+db.collection.deIeteMany( filter, <options> )
+
+db.dropDatabase()
