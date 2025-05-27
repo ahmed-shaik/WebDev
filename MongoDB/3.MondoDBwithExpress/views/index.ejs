@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Chats</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      .chat {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+        margin: 20px auto;
+        max-width: 400px;
+        padding: 16px 24px;
+        border-left: 5px solid #4caf50;
+      }
+      .chat p {
+        margin: 8px 0;
+        color: #444;
+      }
+      .chat div {
+        background: #f0f7fa;
+        border-radius: 4px;
+        padding: 8px 12px;
+        margin: 8px 0;
+      }
+      .chat p:first-child {
+        font-weight: bold;
+        color: #2196f3;
+      }
+      .chat p:last-child {
+        font-style: italic;
+        color: #888;
+      }
+      .add-btn {
+        background-color: #2196f3;
+        color: #fff;
+        border: none;
+        padding: 10px 22px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin: 20px auto;
+        display: block;
+        transition: background 0.2s;
+      }
+      .add-btn:hover {
+        background-color: #1769aa;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>All chats</h1>
+    <% for (let chat of chats) {%>
+    <div class="chat">
+      <p>From: <%= chat.from %></p>
+      <div>
+        <p>received by: <%= chat.msg %></p>
+        <form action="/chats/<%= chat._id %>/edit">
+          <Button>Edit</Button>
+        </form>
+        <form action="/chats/<%= chat._id %>?_method=DELETE" method="post">
+          <Button>Delete</Button>
+        </form>
+      </div>
+      <p>to: <%= chat.to %></p>
+      <p>Created At: <%= chat.created_at.toString().split(" ")[4] %></p>
+      <p>
+        Created At:<%=chat.created_at.toString().split(" ").slice(0,4).join(' ')
+        %>
+      </p>
+    </div>
+    <% } %>
+    <form action="/chats/new" method="GET">
+      <button class="add-btn">Add new post</button>
+    </form>
+  </body>
+</html>
