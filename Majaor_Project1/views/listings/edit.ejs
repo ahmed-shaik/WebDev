@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WonderLust</title>
+  </head>
+  <body>
+    <h3>Edit this Listing</h3>
+    <form method="post" action="/listings/<%= listing._id %>/?_method=PATCH">
+      <input
+        type="text"
+        value="<%= listing.title %>"
+        name="listing[title]"
+        id=""
+        placeholder="Enter title"
+      />
+      <br />
+      <textarea type="text" name="listing[description]" id="">
+            <%= listing.description %>
+      </textarea>
+      <br />
+      <input
+        type="text"
+        name="listing[image]"
+        value="<%= listing.image %>"
+        id=""
+      />
+      <br />
+      <input
+        type="number"
+        name="listing[price]"
+        id=""
+        value="<%= listing.price %>"
+      />
+      <br />
+      <input
+        type="text"
+        name="listing[location]"
+        id=""
+        value="<%= listing.location %>"
+      />
+      <br />
+      <input
+        type="text"
+        name="listing[country]"
+        id=""
+        value="<%= listing.country %>"
+      />
+      <br />
+      <button>Edit</button>
+    </form>
+  </body>
+</html>
